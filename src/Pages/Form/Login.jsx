@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import img from '../../assets/undraw_login_re_4vu2 (1).svg'
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import SocialLogIn from '../../Component/SocialLogIn';
 
 
 
@@ -72,9 +73,10 @@ const Login = () => {
                             </div>
 
                         </form>
-                        <p className='m-5'><small> Already have an account? <Link className='text-orange-500' to='/register'>Register</Link></small></p>
+                        <p className='m-5'><small> Already have an account? <Link className='text-orange-500' to='/register'><span className='text-xl m-3 hover:text-orange-300'> Register</span></Link></small></p>
 
                     </div>
+                    <SocialLogIn></SocialLogIn>
                 </div>
             </div>
         </div>

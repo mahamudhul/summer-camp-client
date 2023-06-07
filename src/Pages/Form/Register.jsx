@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import img from '../../assets/undraw_welcome_re_h3d9 (1).svg'
 import { AuthContext } from '../../Provider/AuthProvider';
+import SocialLogIn from '../../Component/SocialLogIn';
 
 
 
@@ -91,10 +92,12 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <input className="btn btn-outline btn-primary" type="submit" value="Register" />
                             </div>
+                            <SocialLogIn></SocialLogIn>
 
                         </form>
-                        <p className='m-5'><small> Already have an account? <Link className='text-orange-500' to='/login'>login</Link></small></p>
+                        <p className='m-5'><small> Already have an account? <Link className='text-fuchsia-50' to='/login'> <span className='text-xl m-3 hover:text-orange-300'> login</span> </Link></small></p>
                     </div>
+                    
                 </div>
             </div>
         </div>

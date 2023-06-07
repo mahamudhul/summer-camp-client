@@ -8,7 +8,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 
 const Navber = () => {
     const { user, logOut } = useContext(AuthContext)
-    // console.log(user)
+    console.log(user)
 
 
     const handleLogOut = () => {
@@ -28,7 +28,7 @@ const Navber = () => {
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/instructors'>Instructors</NavLink></li>
                         <li><NavLink to='/classes'>Classes</NavLink></li>
-                        <li><NavLink to='/'>Dashboard </NavLink></li>
+                        <li><NavLink to='/dashboard'>Dashboard </NavLink></li>
                         <li><NavLink to='/register'>Register</NavLink></li>
                         
                     </ul>
