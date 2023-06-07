@@ -15,8 +15,8 @@ const Navber = () => {
                 <div>
                     <ul className='flex gap-5'>
                         <li><NavLink to='/'>Home</NavLink></li>
-                        <li><NavLink to='/'>Instructors</NavLink></li>
-                        <li><NavLink to='/'>Classes</NavLink></li>
+                        <li><NavLink to='/instructors'>Instructors</NavLink></li>
+                        <li><NavLink to='/classes'>Classes</NavLink></li>
                         <li><NavLink to='/'>Dashboard </NavLink></li>
                         <li><NavLink to='/login'>Login </NavLink></li>
                         <li><NavLink to='/register'>Register</NavLink></li>
