@@ -54,3 +54,7 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+// { pattern:/^(?=.{6,})(?=.*[!#$%&? "])(?=.*[A-Z])$/}
