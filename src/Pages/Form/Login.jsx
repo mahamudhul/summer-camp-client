@@ -10,8 +10,6 @@ import SocialLogIn from '../../Component/SocialLogIn';
 
 
 
-
-
 const Login = () => {
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
     const { signInUser } = useContext(AuthContext);

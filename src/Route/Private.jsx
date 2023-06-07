@@ -10,7 +10,7 @@ const Private = ({ children }) => {
 
 
     if (loading) {
-        return <span className="loading loading-spinner loading-lg"></span>
+        return <div className='text-center mt-36'><span className="loading loading-spinner loading-lg "></span></div>
 
     }
 
