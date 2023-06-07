@@ -3,6 +3,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 // import { BsPersonCircle } from 'react-icons/bs';
 
+// TODO: logo name 
 
 const Navber = () => {
     return (
@@ -17,6 +18,7 @@ const Navber = () => {
                         <li><NavLink to='/'>Instructors</NavLink></li>
                         <li><NavLink to='/'>Classes</NavLink></li>
                         <li><NavLink to='/'>Dashboard </NavLink></li>
+                        <li><NavLink to='/login'>Login </NavLink></li>
                     </ul>
                 </div>
                 <div className="">
