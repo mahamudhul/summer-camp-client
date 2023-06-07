@@ -21,14 +21,14 @@ const Instructors = () => {
                 {
                     instructors.map((instructor, index) =>
 
-                        <div key={index} className="card card-compact w-96 h-96 bg-base-100 shadow-xl">
+                        <div key={index} className="card card-compact w-96 h-96  bg-base-100 shadow-xl">
                             <figure><img src={instructor.image} alt="instuctors" /></figure>
 
                             <div className="card-body mt-5">
                                 <h2 className="card-title">{instructor.name}</h2>
                                 <h2> <span className='font-bold '>Email:</span> Email: {instructor.email}</h2>
-                                <div className="card-actions justify-start mt-5">
-                                    <button className="btn btn-primary">Buy Now</button>
+                                <div className="card-actions justify-center">
+                                    <button className="btn btn-accent btn-outline mt-5">Buy Now</button>
                                 </div>
                             </div>
                         </div>

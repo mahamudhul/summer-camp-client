@@ -1,63 +1,63 @@
 [
     {
-      "image": "class1.jpg",
-      "name": "Yoga Basics",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq9axz-w2nvqsfh5yfFpRKBtmC0Ybychei1A&usqp=CAU",
+      "name": "Football Academy",
       "instructor": "John Smith",
       "availableSeats": 15,
       "price": 20
     },
     {
-      "image": "class2.jpg",
-      "name": "Pilates Fusion",
+      "image": "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2017/09/06120641/060917_MadanLalCricketAcademy_02.jpg",
+      "name": "Cricket Academy",
       "instructor": "Jane Doe",
       "availableSeats": 10,
       "price": 25
     },
     {
-      "image": "class3.jpg",
-      "name": "Zumba Fitness",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtOyV2prnB1JkUs0HK7OHTpFNHGreIFjEPug&usqp=CAU",
+      "name": "Basketball Academy",
       "instructor": "Alex Johnson",
       "availableSeats": 20,
       "price": 15
     },
     {
-        "image": "class2.jpg",
-        "name": "Pilates Fusion",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwdzR_RD5Z8atgk25-TK_q_qSKX_oAQsaQBQ&usqp=CAU",
+        "name": "Tennis Academy",
         "instructor": "Jane Doe",
         "availableSeats": 10,
         "price": 25
       },
       {
-        "image": "class3.jpg",
-        "name": "Zumba Fitness",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKauX1k-afOVt8CU18HeQR-OVS9ZAszBPNVw&usqp=CAU",
+        "name": "Baseball Academy",
         "instructor": "Alex Johnson",
         "availableSeats": 20,
         "price": 15
       },
       {
-        "image": "class1.jpg",
-        "name": "Yoga Basics",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVfJjlDab9R91GUjSH8gX0ATGo9CCCXuRlxw&usqp=CAU",
+        "name": "Swimming Academy",
         "instructor": "John Smith",
         "availableSeats": 15,
         "price": 20
       },
       {
-        "image": "class2.jpg",
-        "name": "Pilates Fusion",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG2-6HQyf5NYuSEVZXNzuRV4szreJ1IE7EAw&usqp=CAU",
+        "name": "Boxing Academy",
         "instructor": "Jane Doe",
         "availableSeats": 10,
         "price": 25
       },
       {
-        "image": "class1.jpg",
-        "name": "Yoga Basics",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzk1aNNmn8rGqBSxtjPtPYc5I_1zuWz-Qebg&usqp=CAU",
+        "name": "Volleyball Academy",
         "instructor": "John Smith",
         "availableSeats": 15,
         "price": 20
       },
       {
-        "image": "class3.jpg",
-        "name": "Zumba Fitness",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdwqDgEQ5hulKo8z5osxZ1HU_AQmHimPpiXg&usqp=CAU",
+        "name": "Ice Hockey Academy",
         "instructor": "Alex Johnson",
         "availableSeats": 20,
         "price": 15
