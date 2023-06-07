@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import img from '../../assets/undraw_welcome_re_h3d9 (1).svg'
+import { AuthContext } from '../../Provider/AuthProvider';
 
 
 
@@ -10,8 +11,29 @@ import img from '../../assets/undraw_welcome_re_h3d9 (1).svg'
 const Register = () => {
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
 
+
+    const { createUser, updateUserProfile } = useContext(AuthContext)
+
     const onSubmit = data => {
         console.log(data)
+
+        createUser(data.email, data.password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+
+                updateUserProfile(data.name, data.photoUrl)
+                    .then(() => {
+
+                    })
+                    .catch((error) => {
+
+                    })
+
+            })
+            .then(error => {
+                console.log(error)
+            });
     }
 
 
@@ -20,14 +42,14 @@ const Register = () => {
             <div className="hero min-h-screen ">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
-                        
+
                         <img src={img} alt="" />
                     </div>
 
 
                     {/* ---Form-- */}
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-slate-400">
-                    <p className="text-3xl font-bold m-5 text-center">Register now!</p>
+                        <p className="text-3xl font-bold m-5 text-center">Register now!</p>
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
                             <div className="form-control">

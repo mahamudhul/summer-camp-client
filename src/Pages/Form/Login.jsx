@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import img from '../../assets/undraw_login_re_4vu2 (1).svg'
+import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 
@@ -11,10 +13,28 @@ import img from '../../assets/undraw_login_re_4vu2 (1).svg'
 
 const Login = () => {
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
+    const { signInUser } = useContext(AuthContext);
 
 
-    const onSubmit = data =>{
+
+    const onSubmit = data => {
         console.log(data)
+
+        signInUser(data.email, data.password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                Swal.fire({
+                    title: 'User Log In Successfully',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                });
+            })
+            .then(error => console.log(error))
     }
 
 
@@ -29,7 +49,7 @@ const Login = () => {
 
                     {/* ---Form-- */}
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl  bg-slate-400">
-                    <p className="text-3xl font-bold m-5 text-center">Login now!</p>
+                        <p className="text-3xl font-bold m-5 text-center">Login now!</p>
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
                             <div className="form-control">

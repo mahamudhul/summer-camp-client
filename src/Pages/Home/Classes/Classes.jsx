@@ -12,7 +12,7 @@ const Classes = () => {
         fetch('classes.json')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 setClasses(data)
             })
     }, [])

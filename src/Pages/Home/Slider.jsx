@@ -15,22 +15,28 @@ import { Pagination } from "swiper";
 
 const Slider = () => {
     return (
-        <Swiper
-            slidesPerView={"auto"}
-            spaceBetween={30}
-            pagination={{
-                clickable: true,
-            }}
-            modules={[Pagination]}
-            className="mySwiper"
-        >
-            <SwiperSlide><img src="https://media.photographycourse.net/wp-content/uploads/2021/10/08151023/beginner-photography-course-girl-camera-scaled.jpg" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="https://media.photographycourse.net/wp-content/uploads/2021/10/08151023/beginner-photography-course-girl-camera-scaled.jpg" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="https://media.photographycourse.net/wp-content/uploads/2021/10/08151023/beginner-photography-course-girl-camera-scaled.jpg" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="https://media.photographycourse.net/wp-content/uploads/2021/10/08151023/beginner-photography-course-girl-camera-scaled.jpg" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="https://media.photographycourse.net/wp-content/uploads/2021/10/08151023/beginner-photography-course-girl-camera-scaled.jpg" alt="" /></SwiperSlide>
-            
-        </Swiper>
+        <div className='mt-32'>
+
+            <div>
+                <h1 className='text-center font-bold text-4xl mb-5'>Welcome, ........</h1>
+            </div>
+            <Swiper
+                slidesPerView={"auto"}
+                spaceBetween={30}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[Pagination]}
+                className="mySwiper"
+            >
+                <SwiperSlide><img src="https://media.photographycourse.net/wp-content/uploads/2021/10/08151023/beginner-photography-course-girl-camera-scaled.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="https://media.photographycourse.net/wp-content/uploads/2021/10/08151023/beginner-photography-course-girl-camera-scaled.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="https://media.photographycourse.net/wp-content/uploads/2021/10/08151023/beginner-photography-course-girl-camera-scaled.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="https://media.photographycourse.net/wp-content/uploads/2021/10/08151023/beginner-photography-course-girl-camera-scaled.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="https://media.photographycourse.net/wp-content/uploads/2021/10/08151023/beginner-photography-course-girl-camera-scaled.jpg" alt="" /></SwiperSlide>
+
+            </Swiper>
+        </div>
 
     );
 };
