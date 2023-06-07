@@ -2,6 +2,12 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import img from '../../assets/undraw_login_re_4vu2 (1).svg'
+
+
+
+
+
 
 const Login = () => {
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
@@ -15,13 +21,15 @@ const Login = () => {
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row">
+                <div className="hero-content flex-col lg:flex-row-reverse">
                     <div>
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <img src={img} alt="" />
                     </div>
 
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+
+                    {/* ---Form-- */}
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl  bg-slate-400">
+                    <p className="text-3xl font-bold m-5 text-center">Login now!</p>
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
                             <div className="form-control">

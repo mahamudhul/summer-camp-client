@@ -1,0 +1,65 @@
+[
+    {
+      "image": "class1.jpg",
+      "name": "Yoga Basics",
+      "instructor": "John Smith",
+      "availableSeats": 15,
+      "price": 20
+    },
+    {
+      "image": "class2.jpg",
+      "name": "Pilates Fusion",
+      "instructor": "Jane Doe",
+      "availableSeats": 10,
+      "price": 25
+    },
+    {
+      "image": "class3.jpg",
+      "name": "Zumba Fitness",
+      "instructor": "Alex Johnson",
+      "availableSeats": 20,
+      "price": 15
+    },
+    {
+        "image": "class2.jpg",
+        "name": "Pilates Fusion",
+        "instructor": "Jane Doe",
+        "availableSeats": 10,
+        "price": 25
+      },
+      {
+        "image": "class3.jpg",
+        "name": "Zumba Fitness",
+        "instructor": "Alex Johnson",
+        "availableSeats": 20,
+        "price": 15
+      },
+      {
+        "image": "class1.jpg",
+        "name": "Yoga Basics",
+        "instructor": "John Smith",
+        "availableSeats": 15,
+        "price": 20
+      },
+      {
+        "image": "class2.jpg",
+        "name": "Pilates Fusion",
+        "instructor": "Jane Doe",
+        "availableSeats": 10,
+        "price": 25
+      },
+      {
+        "image": "class1.jpg",
+        "name": "Yoga Basics",
+        "instructor": "John Smith",
+        "availableSeats": 15,
+        "price": 20
+      },
+      {
+        "image": "class3.jpg",
+        "name": "Zumba Fitness",
+        "instructor": "Alex Johnson",
+        "availableSeats": 20,
+        "price": 15
+      }
+  ]

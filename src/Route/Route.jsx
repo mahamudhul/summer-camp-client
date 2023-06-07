@@ -22,6 +22,14 @@ export const router = createBrowserRouter([
                 path: "/register",
                 element: <Register></Register>,
             },
+            {
+                path: "/instructors",
+                element: <Register></Register>,
+            },
+            {
+                path: "/classes",
+                element: <Register></Register>,
+            },
             
         ]
     }
