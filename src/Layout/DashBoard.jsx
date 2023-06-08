@@ -6,9 +6,8 @@ import Footer from '../Shared/Footer';
 import UseAdmin from '../Hooks/UseAdmin';
 
 const DashBoard = () => {
-    // const isAdmin = true;
-    const [isAdmin] = UseAdmin()
-    // console.log(isAdmin)
+    const isAdmin = false;
+    // const [isAdmin] = UseAdmin()
     const isInstructor = false;
 
 
@@ -17,7 +16,6 @@ const DashBoard = () => {
         <div>
 
             <Navber></Navber>
-
 
 
             <div className="drawer lg:drawer-open">
