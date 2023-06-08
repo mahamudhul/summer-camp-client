@@ -10,7 +10,6 @@ const Navber = () => {
     const { user, logOut } = useContext(AuthContext)
     console.log(user)
 
-
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -21,7 +20,7 @@ const Navber = () => {
         <div className=''>
             <div className="flex justify-between navbar bg-gray-500">
                 <div className="">
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-3xl font-bold">Summer Haven</a>
                 </div>
                 <div>
                     <ul className='flex gap-5'>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { BiHash } from 'react-icons/bi';
 
-// TODO: style, name 
+// TODO: style, color , added search field
 
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
             <footer className="footer p-10 bg-base-200 text-base-content">
                 <div>
                    <BiHash className='text-4xl'></BiHash>
-                    <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                    <p> <span className='text-2xl font-bold'>Summer Haven</span> <br />Providing reliable tech since 1992</p>
                 </div>
                 <div>
                     <span className="footer-title">Services</span>
@@ -35,9 +35,9 @@ const Footer = () => {
                 </div>
 
             </footer>
-            <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+            <footer className="footer footer-center p-4 bg-slate-400 text-base-content">
                 <div>
-                    <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+                    <p>Copyright © 2023 - All right reserved by SUMMER HAVEN .</p>
                 </div>
             </footer>
         </div>

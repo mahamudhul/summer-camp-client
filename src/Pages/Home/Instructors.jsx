@@ -1,26 +1,35 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
 
 const Instructors = () => {
-    const [instructors, setInstructors] = useState([])
+    // const [instructors, setInstructors] = useState([])
 
-    // console.log(instructors)
-    useEffect(() => {
-        fetch('instructors.json')
-            .then(res => res.json())
-            .then(data => {
-                // console.log(data)
-                setInstructors(data)
-            })
-    }, [])
+    // // console.log(instructors)
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/instructors')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             // console.log(data)
+    //             setInstructors(data)
+    //         })
+    // }, [])
+
+
+    const { data: instructors = [] } = useQuery({
+        queryKey: ['instructors'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/instructors');
+            return res.json();
+        }
+    })
 
 
     
 
     return (
         <div>
-            <h1>this instructors pages</h1>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 my-20'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 my-20 ms-10'>
                 {
                     instructors.map((instructor, index) =>
 
@@ -30,8 +39,8 @@ const Instructors = () => {
                             <div className="card-body mt-5">
                                 <h2 className="card-title">{instructor.name}</h2>
                                 <h2> <span className='font-bold '>Email:</span> Email: {instructor.email}</h2>
-                                <div className="card-actions justify-center">
-                                    <button className="btn btn-accent btn-outline mt-5">Buy Now</button>
+                                <div className="card-actions justify-start">
+                                    <button className="btn btn-accent btn-outline mt-5">Details</button>
                                 </div>
                             </div>
                         </div>

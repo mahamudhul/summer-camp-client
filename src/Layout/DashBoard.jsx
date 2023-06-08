@@ -1,15 +1,25 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import Navber from '../Shared/Navber';
+import Footer from '../Shared/Footer';
+import UseAdmin from '../Hooks/UseAdmin';
 
 const DashBoard = () => {
-    const isAdmin = false;
+    // const isAdmin = true;
+    const [isAdmin] = UseAdmin()
+    // console.log(isAdmin)
     const isInstructor = false;
 
-    
+
 
     return (
         <div>
+
+            <Navber></Navber>
+
+
+
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center justify-center">
@@ -24,8 +34,7 @@ const DashBoard = () => {
 
                 <div className="drawer-side bg-teal-200">
                     <label htmlFor="my-drawer-2 " className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-slate-300 text-base-content">
-
+                    <ul className="menu p-4 w-80 h-full bg-slate-300 text-base-content gap-5 text-xl font-bold">
 
 
 
@@ -44,12 +53,12 @@ const DashBoard = () => {
                                 <li><Link to='/dashboard/paymentHistory'>Payment history</Link></li>
                             </>
                         }
-
-                        <div className="divider"></div>
-                        <li><Link to='/'>Home</Link></li>
                     </ul>
                 </div>
             </div>
+
+
+            <Footer></Footer>
         </div>
     );
 };

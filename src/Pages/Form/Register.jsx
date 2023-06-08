@@ -1,17 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/undraw_welcome_re_h3d9 (1).svg'
 import { AuthContext } from '../../Provider/AuthProvider';
 import SocialLogIn from '../../Component/SocialLogIn';
+import Swal from 'sweetalert2';
 
 
 
 
 const Register = () => {
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
-
+    const navigate = useNavigate();
 
     const { createUser, updateUserProfile } = useContext(AuthContext)
 
@@ -26,11 +27,34 @@ const Register = () => {
                 updateUserProfile(data.name, data.photoUrl)
                     .then(() => {
 
+                        const saveUser = { name: data.name, email: data.email }
+
+                        fetch('http://localhost:5000/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(saveUser)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                // console.log(data)
+                                if (data.insertedId) {
+                                    reset();
+                                    Swal.fire({
+                                        position: 'top-center',
+                                        icon: 'success',
+                                        title: 'User Profile Updated',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    navigate('/');
+                                }
+                            })
                     })
                     .catch((error) => {
 
                     })
-
             })
             .then(error => {
                 console.log(error)
@@ -97,7 +121,7 @@ const Register = () => {
                         </form>
                         <p className='m-5'><small> Already have an account? <Link className='text-fuchsia-50' to='/login'> <span className='text-xl m-3 hover:text-orange-300'> login</span> </Link></small></p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
