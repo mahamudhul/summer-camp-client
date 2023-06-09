@@ -17,7 +17,7 @@ const ClassesDetails = ({cl}) => {
 
 
     const handleAddClass = item => {
-        // console.log("It's working ...............", item)
+        console.log(user.email)
 
 
         if (user && user.email) {
@@ -45,6 +45,7 @@ const ClassesDetails = ({cl}) => {
                     }
                 })
         }
+        
         else {
             Swal.fire({
                 title: 'Please login to see the classes',
@@ -73,7 +74,7 @@ const ClassesDetails = ({cl}) => {
                     <p>Available Seat: {cl.availableSeats}</p>
                     <p>Price: $ {price}</p>
                     <div className="card-actions justify-start mt-3">
-                        <button onClick={() => handleAddClass(cl)} className="btn btn-accent btn-outline">Details</button>
+                        <button onClick={() => handleAddClass(cl)} className="btn btn-accent btn-outline">Select</button>
                     </div>
                 </div>
             </div>

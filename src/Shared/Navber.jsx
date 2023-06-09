@@ -8,7 +8,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 
 const Navber = () => {
     const { user, logOut } = useContext(AuthContext)
-    console.log(user)
+    // console.log(user)
 
     const handleLogOut = () => {
         logOut()
@@ -17,10 +17,10 @@ const Navber = () => {
     }
 
     return (
-        <div className=''>
-            <div className="flex justify-between navbar bg-opacity-40 bg-yellow-500">
+        <div >
+            <div className="flex justify-between navbar ">
                 <div className="">
-                    <a className="btn btn-ghost normal-case text-3xl font-bold">Summer Haven</a>
+                    <a className="btn btn-ghost normal-case text-3xl font-bold">𝒮𝓊𝓂𝓂𝑒𝓇 𝐻𝒶𝓋𝑒𝓃</a>
                 </div>
                 <div>
                     <ul className='flex gap-5'>

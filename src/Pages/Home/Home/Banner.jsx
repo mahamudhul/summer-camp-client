@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { Swiper, SwiperSlide } from "swiper/react";
 
 
 import "swiper/css";
-import Navber from '../../../Shared/Navber';
 
 
 const Banner = () => {

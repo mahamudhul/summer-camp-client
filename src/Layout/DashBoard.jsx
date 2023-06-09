@@ -16,13 +16,15 @@ const DashBoard = () => {
 
     return (
         <div>
+            <div className='bg-opacity-40 bg-yellow-500'>
+                <Navber></Navber>
+            </div>
 
-            <Navber></Navber>
 
 
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center">
+                <div className="drawer-content flex flex-col  justify-center mx-10">
 
 
                     {/* Page content here */}
@@ -34,7 +36,7 @@ const DashBoard = () => {
 
                 <div className="drawer-side bg-teal-200">
                     <label htmlFor="my-drawer-2 " className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-slate-300 text-base-content gap-5 text-xl font-bold">
+                    <ul className="menu p-4 w-70 h-full bg-slate-300 text-base-content gap-5 text-xl font-bold">
 
 
 
@@ -48,8 +50,9 @@ const DashBoard = () => {
                                 <li><Link to='/dashboard/myClasses'>My Classes</Link></li>
                             </> : <>
                                 <li><Link to='/dashboard/mySelectedClass'>My Selected Classes</Link></li>
+
                                 <li><Link to='/dashboard/myEnrolledClasses'>My Enrolled Classes</Link></li>
-                                <li><Link to='/dashboard/payment'>Payment</Link></li>
+
                                 <li><Link to='/dashboard/paymentHistory'>Payment history</Link></li>
                             </>
                         }

@@ -1,22 +1,68 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
+import Swal from 'sweetalert2';
+
+
+const img_hosting_token = import.meta.env.VITE_Image_Upload_token;
 
 const AddClass = () => {
-
+    const [axiosSecure] = useAxiosSecure();
     const { register, handleSubmit, reset } = useForm();
+    const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
 
     const onSubmit = data => {
         console.log(data)
+
+        const formData = new FormData();
+        formData.append('image', data.image[0])
+
+        fetch(img_hosting_url, {
+            method: 'POST',
+            body: formData
+        })
+
+            .then(res => res.json())
+            .then(imgResponse => {
+                console.log(imgResponse)
+                if (imgResponse.success) {
+                    const imgURL = imgResponse.data.display_url;
+
+                    const { name, instructorName, number, price, email } = data;
+
+                    const newItem = { name, price: parseFloat(price), instructorName, email, image: imgURL, status: "pending"
+                    };
+
+                    console.log(newItem)
+
+
+                    axiosSecure.post('/classes', newItem)
+                        .then(data => {
+                            console.log('after posting new menu item', data.data)
+                            
+                            if (data.data.insertedId) {
+                                reset();
+                                Swal.fire({
+                                    position: 'top-center',
+                                    icon: 'success',
+                                    title: 'Class added successfully',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
+                            }
+                        })
+                }
+            })
     }
 
 
     return (
         <div>
-           <div>
+            <div>
 
-           </div>
-           
+            </div>
+
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="form-control w-full mb-4">
@@ -33,7 +79,7 @@ const AddClass = () => {
                         <span className="label-text font-semibold">Instructor Name*</span>
                     </label>
                     <input type="text" placeholder="Instructor Name"
-                        {...register("name", { required: true, maxLength: 120 })}
+                        {...register("instructorName", { required: true, maxLength: 120 })}
                         className="input input-bordered w-full " />
                 </div>
 

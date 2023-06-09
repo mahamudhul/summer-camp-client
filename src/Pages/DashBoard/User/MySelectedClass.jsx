@@ -1,23 +1,33 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import { useQuery } from 'react-query';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { MdDelete } from 'react-icons/md';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../../Provider/AuthProvider';
+import { Link } from 'react-router-dom';
 
 
 const MySelectedClass = () => {
+    const { user, loading } = useContext(AuthContext);
+
+
     const [axiosSecure] = useAxiosSecure();
 
+    const { data: select = [], refetch } = useQuery({
 
-    const { data: select = [], isLoading: loading, refetch } = useQuery({
-        queryKey: ['select'],
+        queryKey: ['select', user?.email],
+        enabled: !loading,
 
         queryFn: async () => {
-            const res = await axiosSecure('/carts');
+            const res = await axiosSecure(`/carts?email=${user?.email}`);
             return res.data;
+
         }
     })
+
+
+    // console.log(select)
 
     const handleDelete = item => {
         Swal.fire({
@@ -66,6 +76,7 @@ const MySelectedClass = () => {
                                 <th>#</th>
                                 <th>Image</th>
                                 <th>Name</th>
+                                <th>Price</th>
                                 <th>Action</th>
                                 <th></th>
                             </tr>
@@ -89,18 +100,22 @@ const MySelectedClass = () => {
                                     </td>
 
                                     <td>
+                                        <h1>$ {s.price}</h1>
+                                    </td>
+
+                                    <td>
                                         <button onClick={() => handleDelete(s)} ><MdDelete className='text-2xl'></MdDelete></button>
                                     </td>
 
                                     <th>
-                                        <button className="btn btn-accent btn-outline">Pay</button>
+                                        <Link to='/dashboard/payment'>
+                                            <button className="btn btn-accent btn-outline">Pay</button>
+                                        </Link>
+
                                     </th>
                                 </tr>
                             </tbody>)
                         }
-
-
-
                     </table>
                 </div>
             </div>
