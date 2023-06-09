@@ -4,11 +4,13 @@ import { Link, Outlet } from 'react-router-dom';
 import Navber from '../Shared/Navber';
 import Footer from '../Shared/Footer';
 import UseAdmin from '../Hooks/UseAdmin';
+import UseInstructors from '../Hooks/UseInstructors';
 
 const DashBoard = () => {
-    const isAdmin = false;
-    // const [isAdmin] = UseAdmin()
-    const isInstructor = false;
+    // const isAdmin = false;
+    const [isAdmin] = UseAdmin()
+    const [isInstructor] = UseInstructors()
+    // const isInstructor = false;
 
 
 

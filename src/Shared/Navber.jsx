@@ -18,7 +18,7 @@ const Navber = () => {
 
     return (
         <div className=''>
-            <div className="flex justify-between navbar bg-gray-500">
+            <div className="flex justify-between navbar bg-opacity-40 bg-yellow-500">
                 <div className="">
                     <a className="btn btn-ghost normal-case text-3xl font-bold">Summer Haven</a>
                 </div>
@@ -29,7 +29,7 @@ const Navber = () => {
                         <li><NavLink to='/classes'>Classes</NavLink></li>
                         <li><NavLink to='/dashboard'>Dashboard </NavLink></li>
                         <li><NavLink to='/register'>Register</NavLink></li>
-                        
+
                     </ul>
                 </div>
                 <div className="">
@@ -40,7 +40,7 @@ const Navber = () => {
                                 user ?
                                     <>
                                         <div className='w-10 rounded-full'>
-                                            <img src={user?.photoURL} alt="" />
+                                            <img className='btn-circle' src={user?.photoURL} alt="" />
                                         </div>
                                     </> : <>
                                         <NavLink to='/login'><button className="btn btn-outline btn-success">Login</button></NavLink>
@@ -48,9 +48,9 @@ const Navber = () => {
                             }
                         </label>
 
-                        <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        {user && <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                             <button onClick={handleLogOut} className="btn btn-accent">Logout</button>
-                        </ul>
+                        </ul>}
 
                     </div>
                 </div>
