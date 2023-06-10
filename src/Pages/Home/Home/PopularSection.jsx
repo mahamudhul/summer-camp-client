@@ -16,6 +16,7 @@ const PopularSection = () => {
 
 
 
+    // TODO: show 6 classes data by sorting
     return (
         <div className='ms-10'>
             <div>

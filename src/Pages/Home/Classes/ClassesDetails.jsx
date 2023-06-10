@@ -64,6 +64,7 @@ const ClassesDetails = ({cl}) => {
 
 
 
+    // TODO: style classes card component
     return (
         <div>
             <div  className="card w-full bg-base-100 shadow-xl">

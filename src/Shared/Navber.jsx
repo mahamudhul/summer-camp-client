@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 // import { BsPersonCircle } from 'react-icons/bs';
 
-// TODO: logo name 
+ 
 
 const Navber = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -51,7 +51,6 @@ const Navber = () => {
                         {user && <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                             <button onClick={handleLogOut} className="btn btn-accent">Logout</button>
                         </ul>}
-
                     </div>
                 </div>
             </div>
@@ -60,3 +59,7 @@ const Navber = () => {
 };
 
 export default Navber;
+
+
+
+// TODO: Style navber

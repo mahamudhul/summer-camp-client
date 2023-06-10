@@ -27,6 +27,8 @@ const Instructors = () => {
 
     
 
+    // TODO:  style innstructor card component
+
     return (
         <div>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 my-20 ms-10'>
