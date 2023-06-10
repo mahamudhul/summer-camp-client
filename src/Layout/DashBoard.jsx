@@ -56,6 +56,13 @@ const DashBoard = () => {
                                 <li><Link to='/dashboard/paymentHistory'>Payment history</Link></li>
                             </>
                         }
+
+
+                        {/* <div className="divider mt-0"></div>
+
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/instructors'>All Instructors</Link></li>
+                        <li><Link to='/classes'>All Classes</Link></li> */}
                     </ul>
                 </div>
             </div>

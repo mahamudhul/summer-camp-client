@@ -9,32 +9,7 @@ const PaymentHistoryDetails = ({ payment, index }) => {
 
     return (
         <div>
-            <div className="overflow-x-auto">
-                <table className="table">
-                    {/* head */}
-
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        {/* row 1 */}
-                        <tr className="bg-base-200">
-                            <th>{index + 1}</th>
-                            <td>{email}</td>
-                            <td>{price}</td>
-                            <td>{quantity}</td>
-                            <td>{date}</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
+            
         </div>
     );
 };

@@ -15,13 +15,15 @@ import AddClass from "../Pages/DashBoard/Instructor/AddClass";
 import MyClasses from "../Pages/DashBoard/Instructor/MyClasses";
 import ManageClasses from "../Pages/DashBoard/Admin/ManageClasses";
 import ManageUsers from "../Pages/DashBoard/Admin/ManageUsers";
+import ErrorPage from "../Component/ErrorPage";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
-        children:[
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
             {
                 path: "/",
                 element: <Home></Home>,
@@ -42,54 +44,53 @@ export const router = createBrowserRouter([
                 path: "/classes",
                 element: <Classes></Classes>
             },
-            
+
         ]
     },
 
     {
         path: "/dashboard",
         element: <Private><DashBoard></DashBoard></Private>,
-        children:[
+        children: [
             // Student Dashboard 
             {
                 path: "mySelectedClass",
-                element:<MySelectedClass></MySelectedClass>
+                element: <MySelectedClass></MySelectedClass>
             },
             {
                 path: "myEnrolledClasses",
-                element:<MyEnrolledClasses></MyEnrolledClasses>
+                element: <MyEnrolledClasses></MyEnrolledClasses>
             },
             {
                 path: "payment",
-                element:<Payment></Payment>
+                element: <Payment></Payment>
             },
             {
                 path: "paymentHistory",
-                element:<PaymentHistory></PaymentHistory>
+                element: <PaymentHistory></PaymentHistory>
             },
 
             // Instructor Dashboard
             {
                 path: "addClass",
-                element:<AddClass></AddClass>
+                element: <AddClass></AddClass>
             },
             {
                 path: "myClasses",
-                element:<MyClasses></MyClasses>
+                element: <MyClasses></MyClasses>
             },
 
 
             // Admin Dashboard
             {
                 path: "manageClasses",
-                element:<ManageClasses></ManageClasses>
+                element: <ManageClasses></ManageClasses>
             },
             {
                 path: "manageUsers",
-                element:<ManageUsers></ManageUsers>
+                element: <ManageUsers></ManageUsers>
             },
 
         ]
-    }
-
+    },
 ])

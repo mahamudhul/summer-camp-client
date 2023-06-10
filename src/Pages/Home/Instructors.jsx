@@ -31,12 +31,12 @@ const Instructors = () => {
 
     return (
         <div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 my-20 ms-10'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 my-20 ms-10 '>
                 {
                     instructors.map((instructor, index) =>
 
-                        <div key={index} className="card card-compact w-96 h-96  bg-base-100 shadow-xl">
-                            <figure><img src={instructor.image} alt="instuctors" /></figure>
+                        <div key={index} className="card card-compact w-96 h-96  bg-base-100 shadow-xl group">
+                            <figure><img className='group hover:scale-110 transition' src={instructor.image} alt="instuctors" /></figure>
 
                             <div className="card-body mt-5">
                                 <h2 className="card-title">{instructor.name}</h2>

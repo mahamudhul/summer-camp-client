@@ -45,6 +45,8 @@ const ClassesDetails = ({cl}) => {
                     }
                 })
         }
+
+        
         
         else {
             Swal.fire({

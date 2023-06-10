@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 // import { BsPersonCircle } from 'react-icons/bs';
 
- 
+
 
 const Navber = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -19,6 +19,7 @@ const Navber = () => {
     return (
         <div >
             <div className="flex justify-between navbar ">
+                {/* fixed z-10 shadow-sm */}
                 <div className="">
                     <a className="btn btn-ghost normal-case text-3xl font-bold">𝒮𝓊𝓂𝓂𝑒𝓇 𝐻𝒶𝓋𝑒𝓃</a>
                 </div>

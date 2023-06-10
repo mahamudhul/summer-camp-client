@@ -4,25 +4,12 @@ import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { useQuery } from 'react-query';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import PaymentHistoryDetails from './PaymentHistoryDetails';
+import UsePayment from '../../../Hooks/UsePayment';
 
 const PaymentHistory = () => {
-    const { loading } = useContext(AuthContext);
-    const [axiosSecure] = useAxiosSecure();
+    const [payments] = UsePayment()
 
-    const { data: payments = [], refetch } = useQuery({
-
-        queryKey: ['payments'],
-        enabled: !loading,
-
-        queryFn: async () => {
-            const res = await axiosSecure('/payments');
-            refetch()
-            return res.data;
-
-        }
-    })
-
-    console.log(payments)
+    // console.log(payments)
 
 
 
@@ -55,7 +42,6 @@ const PaymentHistory = () => {
                                     <td>{payment.quantity}</td>
                                     <td>{payment.date}</td>
                                 </tr>
-
                             </tbody>
                         </table>
                     </div>)
