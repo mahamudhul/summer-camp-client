@@ -16,7 +16,7 @@ const DashBoard = () => {
 
     return (
         <div>
-            <div className='bg-opacity-40 bg-yellow-500'>
+            <div >
                 <Navber></Navber>
             </div>
 

@@ -22,12 +22,12 @@ const PopularSection = () => {
             <div>
                 <p className='text-center text-3xl font-bold underline underline-offset-8'>OUR Classes</p>
             </div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 my-20'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 my-20 mr-10'>
                 {
                     classes.map((cl, index) =>
                         <div key={index}>
-                            <div className="card w-96 h-96 bg-base-100 shadow-xl">
-                                <figure><img src={cl.image} alt="Shoes" /></figure>
+                            <div className="card w-full bg-base-100 shadow-xl ">
+                                <figure><img className='h-80' src={cl.image} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{cl.name}</h2>
                                     <p>Instructor: {cl.instructor}</p>

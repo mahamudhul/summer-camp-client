@@ -10,7 +10,7 @@ const ErrorPage = () => {
 
     return (
         <div>
-            <section className='flex items-center h-full px-20 pt-20  '>
+            <section className='flex items-center h-full px-20 pt-20 '>
                 <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
                     <img src={img} alt="" />
                     <div className=' text-center mt-20'>

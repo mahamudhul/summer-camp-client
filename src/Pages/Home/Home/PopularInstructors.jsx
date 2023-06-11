@@ -20,13 +20,13 @@ const PopularInstructors = () => {
             <div>
                 <p className='text-center text-3xl font-bold underline underline-offset-8'>OUR INSTRUCTORS</p>
             </div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 my-20'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 my-20 mr-10'>
 
                 
                 {
                     instructors.map((instructor, index) =>
 
-                        <div key={index} className="card card-compact w-96 h-96  bg-base-100 shadow-xl">
+                        <div key={index} className="card w-full bg-base-100 shadow-xl">
                             <figure><img src={instructor.image} alt="instuctors" /></figure>
 
                             <div className="card-body mt-5">
