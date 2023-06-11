@@ -17,6 +17,7 @@ import ManageClasses from "../Pages/DashBoard/Admin/ManageClasses";
 import ManageUsers from "../Pages/DashBoard/Admin/ManageUsers";
 import ErrorPage from "../Component/ErrorPage";
 import ClassUpdate from "../Pages/DashBoard/Instructor/ClassUpdate";
+import Anime from "../Component/Anime";
 
 
 export const router = createBrowserRouter([
@@ -53,6 +54,11 @@ export const router = createBrowserRouter([
         path: "/dashboard",
         element: <Private><DashBoard></DashBoard></Private>,
         children: [
+
+            {
+                path: "home",
+                element: <Anime></Anime>
+            },
             // Student Dashboard 
             {
                 path: "mySelectedClass",

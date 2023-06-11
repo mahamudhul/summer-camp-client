@@ -5,6 +5,7 @@ import PopularSection from './PopularSection';
 import PopularInstructors from './PopularInstructors';
 import Banner from './Banner';
 import Feature from '../../../Component/Feature';
+import Anime from '../../../Component/Anime';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <PopularInstructors></PopularInstructors>
             <PopularSection></PopularSection>
             <Feature></Feature>
+            <Anime></Anime>
         </div>
     );
 };
