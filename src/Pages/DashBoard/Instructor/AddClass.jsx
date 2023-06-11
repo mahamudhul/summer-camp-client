@@ -97,7 +97,7 @@ const AddClass = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Available seats*</span>
                         </label>
-                        <input type="number" {...register("number", { required: true })} placeholder="seats" className="input input-bordered w-full " />
+                        <input type="availableSeats" {...register("availableSeats", { required: true })} placeholder="seats" className="input input-bordered w-full " />
                     </div>
 
                     <div className="form-control w-full ml-4">

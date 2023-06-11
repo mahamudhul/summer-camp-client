@@ -12,6 +12,7 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^2.1.0",
     "@stripe/stripe-js": "^1.54.0",
+    "animejs": "^3.2.1",
     "axios": "^1.4.0",
     "firebase": "^9.22.1",
     "localforage": "^1.10.0",
@@ -39,5 +40,9 @@
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.9"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-mahamudhul.git",
+  "author": "mahamudhul <111944934+mahamudhul@users.noreply.github.com>",
+  "license": "MIT"
 }

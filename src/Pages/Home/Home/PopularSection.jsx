@@ -19,7 +19,7 @@ const PopularSection = () => {
     // TODO: show 6 classes data by sorting
     return (
         <div className='ms-10'>
-            <div>
+            <div className='divider'>
                 <p className='text-center text-3xl font-bold underline underline-offset-8'>OUR Classes</p>
             </div>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-5 my-20 mr-10'>

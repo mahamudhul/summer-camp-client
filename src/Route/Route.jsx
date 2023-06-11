@@ -16,6 +16,7 @@ import MyClasses from "../Pages/DashBoard/Instructor/MyClasses";
 import ManageClasses from "../Pages/DashBoard/Admin/ManageClasses";
 import ManageUsers from "../Pages/DashBoard/Admin/ManageUsers";
 import ErrorPage from "../Component/ErrorPage";
+import ClassUpdate from "../Pages/DashBoard/Instructor/ClassUpdate";
 
 
 export const router = createBrowserRouter([
@@ -70,6 +71,8 @@ export const router = createBrowserRouter([
                 element: <PaymentHistory></PaymentHistory>
             },
 
+
+
             // Instructor Dashboard
             {
                 path: "addClass",
@@ -78,6 +81,10 @@ export const router = createBrowserRouter([
             {
                 path: "myClasses",
                 element: <MyClasses></MyClasses>
+            },
+            {
+                path: "updateClass/:id",
+                element: <ClassUpdate></ClassUpdate>
             },
 
 

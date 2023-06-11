@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 import UseClasses from '../../../Hooks/UseClasses';
 
 const ClassesDetails = ({cl}) => {
-    const { name, image, price,instructor, _id } = cl;
+    const { name, image, price,instructorName, _id } = cl;
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -73,7 +73,7 @@ const ClassesDetails = ({cl}) => {
                 <figure><img className='h-96' src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
-                    <p>Instructor: {instructor}</p>
+                    <p>Instructor: {instructorName}</p>
                     <p>Available Seat: {cl.availableSeats}</p>
                     <p>Price: $ {price}</p>
                     <div className="card-actions justify-start mt-3">
