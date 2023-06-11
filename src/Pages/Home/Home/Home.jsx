@@ -4,6 +4,7 @@ import Slider from './Slider';
 import PopularSection from './PopularSection';
 import PopularInstructors from './PopularInstructors';
 import Banner from './Banner';
+import Feature from '../../../Component/Feature';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Slider></Slider>
             <PopularInstructors></PopularInstructors>
             <PopularSection></PopularSection>
+            <Feature></Feature>
         </div>
     );
 };

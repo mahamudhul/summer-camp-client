@@ -1,11 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
+import PopularInstDetails from './PopularInstDetails';
+
 
 const PopularInstructors = () => {
-
     const [instructors, setInstructors] = useState([])
-
     // console.log(instructors)
+
+
+    
+
+
+
+
     useEffect(() => {
         fetch('http://localhost:5000/instructors')
             .then(res => res.json())
@@ -15,28 +22,24 @@ const PopularInstructors = () => {
             })
     }, [])
 
+
+
+
+
+
+
     return (
-        <div className='ms-10 mb-36'>
-            <div>
+        <div className='ms-10 mb-36' >
+            <div className="divider">
                 <p className='text-center text-3xl font-bold underline underline-offset-8'>OUR INSTRUCTORS</p>
             </div>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-5 my-20 mr-10'>
 
-                
+
                 {
                     instructors.map((instructor, index) =>
 
-                        <div key={index} className="card w-full bg-base-100 shadow-xl">
-                            <figure><img src={instructor.image} alt="instuctors" /></figure>
-
-                            <div className="card-body mt-5">
-                                <h2 className="card-title">{instructor.name}</h2>
-                                <h2> <span className='font-bold '>Email:</span> Email: {instructor.email}</h2>
-                                <div className="card-actions justify-start mt-3">
-                                    <button className="btn btn-accent btn-outline mt-5">Buy Now</button>
-                                </div>
-                            </div>
-                        </div>
+                        <PopularInstDetails key={index} instructor={instructor}></PopularInstDetails>
                     )
                 }
             </div>

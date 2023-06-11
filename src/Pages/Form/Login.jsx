@@ -1,23 +1,31 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/undraw_login_re_4vu2 (1).svg'
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 import SocialLogIn from '../../Component/SocialLogIn';
+import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
 
 
 
 
 const Login = () => {
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
+
     const { signInUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
     const from = location.state?.from?.pathname || "/";
 
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
 
     const onSubmit = data => {
         console.log(data)
@@ -68,7 +76,19 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" {...register("password", { required: true, minLength: 6 })} placeholder="password" className="input input-bordered" />
+
+
+                                <div>
+                                    <input type={passwordVisible ? 'text' : 'password'}
+                                        {...register("password", { required: true, minLength: 6 })} placeholder="password" className="input input-bordered" />
+                                    <span className='inline-block  -ml-10' onClick={togglePasswordVisibility}>
+                                        {passwordVisible ? (
+                                            <BsEyeSlashFill className='text-2xl'></BsEyeSlashFill >
+                                        ) : (
+                                            <BsEyeFill className='text-2xl'></BsEyeFill>
+                                        )}
+                                    </span>
+                                </div>
                             </div>
 
                             <div className="form-control mt-6">
@@ -78,7 +98,6 @@ const Login = () => {
                             <SocialLogIn></SocialLogIn>
                         </form>
                         <p className='m-5'><small> Already have an account? <Link className='text-orange-500' to='/register'><span className='text-xl m-3 hover:text-orange-300'> Register</span></Link></small></p>
-
                     </div>
                 </div>
             </div>
@@ -86,8 +105,9 @@ const Login = () => {
     );
 };
 
+
 export default Login;
 
 
-
+// TODO: password style
 // { pattern:/^(?=.{6,})(?=.*[!#$%&? "])(?=.*[A-Z])$/}
